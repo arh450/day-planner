@@ -21,34 +21,33 @@ body {
     text-align: center;
     color: #ffffff;
     font-family: 'Oxygen', sans-serif;
-    font-size: 50px;
+    font-size: 60px;
 }
 
-/* .card{
-    margin-bottom: 0;
-    padding-bottom: 0;
-} */
+.container {
+    margin: auto auto 50px auto;
+}
 .row {
     white-space: pre-wrap;
     height: 75px;
     padding: 10;
     margin: 0;
-    /* justify-content: center; */
 }
 
 #time-display {
     text-align: center;
     margin: auto;
-    
+    font-size: 20px;
 }
 .col-md-10 {
     background-color: #e4dae2;
     border: none;
     resize: none;
     color: #000000;
-    /* border-left: 1px solid rgb(196, 194, 194);
-    border-top: 1px solid rgb(196, 194, 194);
-    border-bottom: 1px solid rgb(184, 184, 184); */
+    font-size: 18px;
+    border-left: 1px solid #cbcbcb;
+    border-top: 1px solid #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
     padding: 10px;
     white-space: pre-wrap;
 }
