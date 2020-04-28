@@ -17,6 +17,13 @@ body {
     border-bottom: 8px solid #000;
 }
 
+#datetime-box {
+background-color: rgba(85, 58, 11, .9);
+margin: 0 200px;
+padding: 10px;
+border-radius: 5px;
+}
+
 .app-title {
     text-align: center;
     color: #ffffff;
@@ -29,7 +36,7 @@ body {
     color: #ffffff;
     font-family: 'Oxygen', sans-serif;
     font-size: 25px;
-    margin: 20px auto 0 auto;
+    margin: 15px auto 0 auto;
 }
 
 #currenttime {
@@ -39,9 +46,11 @@ body {
     font-size: 22px;
     margin: 15px auto 0 auto;
 }
+
 .container {
     margin: auto auto 50px auto;
 }
+
 .row {
     white-space: pre-wrap;
     height: 75px;
@@ -54,6 +63,7 @@ body {
     margin: auto;
     font-size: 20px;
 }
+
 .col-md-10 {
     background-color: #e4dae2;
     border: none;
