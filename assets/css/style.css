@@ -24,6 +24,21 @@ body {
     font-size: 60px;
 }
 
+#currentday {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 25px;
+    margin: 20px auto 0 auto;
+}
+
+#currenttime {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 22px;
+    margin: 15px auto 0 auto;
+}
 .container {
     margin: auto auto 50px auto;
 }
