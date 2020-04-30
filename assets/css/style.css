@@ -47,6 +47,14 @@ body {
     margin: 15px auto 0 auto;
 }
 
+#clear-schedule-button {
+    display: block;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    border: none;
+    font-family: 'Oxygen', sans-serif;
+}
+
 .container {
     margin: auto auto 50px auto;
 }

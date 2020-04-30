@@ -14,13 +14,13 @@ $(document).ready(function () {
 
     // Array containing workday hours that match id's used for input boxes (FORMATTED IN MILITARY TIME)
     var workDayHours = ["9", "10", "11", "12", "13", "14", "15", "16", "17"]
-    appointmentUpdater();
 
     // Function to update inputbox background-color by comparing workDayHours array items (hours in this case) to a variable called currentHour that uses moment.js (FORMATED IN MILITARY TIME)
-    function appointmentUpdater() {
+    function colorUpdater() {
         var currentHour = moment().format("H");
 
         for (var i = 0; i < workDayHours.length; i++) {
+
             if (parseInt(workDayHours[i]) > currentHour) {
                 $("#" + workDayHours[i]).attr("style", "background-color: #85aa9b");
             }
@@ -31,27 +31,36 @@ $(document).ready(function () {
                 $("#" + workDayHours[i]).attr("style", "background-color: #ff7d7d");
             }
         }
-
-
-
     }
 
+    // Call of colorUpdater function
+    colorUpdater();
 
-
-    // On click event of save-button that sets hour ans user input to local storage
-
+    // On click event of save-button that sets hour and user input to local storage (found as siblings to save button) 
     $(".save-button").click(function (e) {
         var userInput = $(this).siblings(".user-input").val();
         var hour = $(this).siblings().attr("id");
-
         localStorage.setItem(hour, userInput);
+
     });
 
+    // Setting each individual input 
+    $("#9").val(localStorage.getItem("9AM"));
+    $("#10").val(localStorage.getItem("10AM"));
+    $("#11").val(localStorage.getItem("11AM"));
+    $("#12").val(localStorage.getItem("12PM"));
+    $("#13").val(localStorage.getItem("1PM"));
+    $("#14").val(localStorage.getItem("2PM"));
+    $("#15").val(localStorage.getItem("3PM"));
+    $("#16").val(localStorage.getItem("4PM"));
+    $("#17").val(localStorage.getItem("5PM"));
 
+    // Clear Schedule button that clears local storage for the input area.
 
-
-
-
-
+    $("#clear-schedule-button").click(function (e) {
+        event.preventDefault();
+        localStorage.clear();
+        $(".user-input").val();
+    });
 
 });
