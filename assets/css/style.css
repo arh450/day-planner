@@ -58,7 +58,7 @@ body {
     margin: 0;
 }
 
-#time-display {
+.time-display {
     text-align: center;
     margin: auto;
     font-size: 20px;
@@ -69,7 +69,6 @@ body {
     border: none;
     resize: none;
     color: #000000;
-    
     font-size: 18px;
     border-left: 1px solid #cbcbcb;
     border-top: 1px solid #cbcbcb;

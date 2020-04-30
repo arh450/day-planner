@@ -31,13 +31,21 @@ $(document).ready(function () {
                 $("#" + workDayHours[i]).attr("style", "background-color: #ff7d7d");
             }
         }
+
+
+
     }
 
 
 
+    // On click event of save-button that sets hour ans user input to local storage
 
+    $(".save-button").click(function (e) {
+        var userInput = $(this).siblings(".user-input").val();
+        var hour = $(this).siblings().attr("id");
 
-
+        localStorage.setItem(hour, userInput);
+    });
 
 
 
