@@ -55,12 +55,12 @@ $(document).ready(function () {
     $("#16").val(localStorage.getItem("4PM"));
     $("#17").val(localStorage.getItem("5PM"));
 
-    // Clear Schedule button that clears local storage for the input area.
+    // Clear Schedule buttons that clears local storage item and current value for the input area.
 
     $("#clear-schedule-button").click(function (e) {
-        event.preventDefault();
         localStorage.clear();
-        $(".user-input").val();
+        location.reload();
     });
+
 
 });
