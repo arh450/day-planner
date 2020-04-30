@@ -41,10 +41,10 @@ $(document).ready(function () {
         var userInput = $(this).siblings(".user-input").val();
         var hour = $(this).siblings().attr("id");
         localStorage.setItem(hour, userInput);
-
     });
 
-    // Setting each individual input 
+    // Setting each individual input to corresponding keyname (hour) from localstorage.
+    // So when user refreshes page after saving appointment/event it will still appear in the input area.
     $("#9").val(localStorage.getItem("9AM"));
     $("#10").val(localStorage.getItem("10AM"));
     $("#11").val(localStorage.getItem("11AM"));
@@ -56,11 +56,10 @@ $(document).ready(function () {
     $("#17").val(localStorage.getItem("5PM"));
 
     // Clear Schedule buttons that clears local storage item and current value for the input area.
-
+    // Gives user an easy way to delete/restart multiple appointments/events as opposed to having to mannually backspace text.
     $("#clear-schedule-button").click(function (e) {
         localStorage.clear();
         location.reload();
     });
-
 
 });
